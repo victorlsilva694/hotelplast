@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+}
+.sidebar-container{
+    position: relative;
+    width: 20%;
+    height: 100vh;
+}
+.row{
+    border: none !important;
+}
+.card{
+    border: none !important;
+}
+.content-wrapper h1{
+    position: absolute;
+    left: 5%;
+    top: 2vh;
+    font-size: max(1.1vw, 12px);
+}
+.col-sm{
+    margin: 10px !important;
+}
+.content-wrapper h2{
+    position: absolute;
+    left: 5%;
+    top: 10vh;
+    font-size: max(2vw, 12px);
+}
+.link-dark{
+    position: relative;
+    left: 10% !important;
+    font-size: 15px;
+    font-style: none;
+    text-decoration: none;
+}
+.user-content{
+    width: 80%;
+    height: 95vh;
+}

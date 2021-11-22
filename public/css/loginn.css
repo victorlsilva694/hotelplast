@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+body{
+    background-color: #e2e2e2;
+}
+.main-container{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+#container-login{
+    background-color: #f5f5f5;
+    position: relative;
+    width: 35%;
+    height: 450px;
+    position: relative;
+    left: 30%;
+    border-radius: 15px;
+    top: 15vh;
+    min-height: 300px;
+}
+.container-form{
+    background-color: #cfcfcf;
+    width: 60%;
+    height: 90vh;
+}
+.form-login{
+    width: 40%;
+    height: 90vh;
+}
+.containerform{
+    background-color: #cfcfcf;
+    width: 39%;
+    position: relative;
+    height: 90vh;
+}
+.containerform h1 {
+    font-size: max(2vw, 18px);
+    font-size: 'Poppins';
+    font-family: 600;
+    text-align: center;
+}
+.image-brand-form{
+    position: relative;
+    width: 30%;
+    left: 35%;
+}
+.modal-form{
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+.forgot{
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+.itens{
+    margin: 10px;
+    width: 50%;
+    height: 50px;
+}
+.itens a{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: max(1.2vw, 12px);
+    color: rgb(1, 89, 139);
+}
+.text-image{
+    width: 100%;
+    height: 500px;
+}
+.form-register{
+    width: 100%;
+    height: 600px;
+}
+.row{
+    background-color: rgba(0, 161, 161, .1);
+    height: 80px !important;
+    width: 100% !important;
+    position: relative;
+    left: 2.7%;
+    border-radius: 6px;
+}
+.col{
+    width: 100% !important; 
+    border-radius: 10px;
+    left: .6%;
+    top: .05vh;
+}
+.form-container{
+    width: 100%;
+    height: 400px;
+}
+.pricer{
+    width: 100%;
+}
+.client{
+    width: 100%;
+}
+.pricer p {
+    position: relative;
+    font-family: 'Open Sans';
+    font-size: max(1.2vw, 15px);
+    text-align: center;
+    font-weight: bold;
+    top: 3vh;
+}
+.client p {
+    position: relative;
+    font-family: 'Open Sans';
+    font-size: max(1.2vw, 15px);
+    text-align: center;
+    font-weight: bold;
+    top: 3vh;
+}
+.form-login{
+    width: 80%;
+    height: 300px;
+    position: relative;
+    left: 10%;
+    top: 5vh;
+}

@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@700&family=Open+Sans&display=swap');
+.content-wrapper h1{
+  font-size: max(1.8vw, 15px);
+  left: 4%;
+  top: 1vh;
+  position: absolute;
+  font-family: 'Open Sans';
+}

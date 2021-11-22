@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" />
+  <title>Document</title>
+</head>
+
+
+<body>
+  <div class="page-wrapper with-navbar with-sidebar with-navbar-fixed-bottom" data-sidebar-type="overlayed-sm-and-down">
+    <div class="sticky-alerts"></div>
+    <nav class="navbar">
+      <a href="#" class="navbar-brand">
+        <img src="/images/Logo.png" alt="...">
+        Hotel Plast
+      </a>
+      <ul class="navbar-nav d-none d-md-flex">
+        <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px) -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">Casas</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Apartamentos</a>
+        </li>
+      </ul>
+      <form class="form-inline d-none d-md-flex ml-auto" action="..." method="...">
+        <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px), ml-auto = margin-left: auto -->
+        <button class="btn btn-primary" type="submit">Sair</button>
+      </form>
+      <!-- Navbar content (with the dropdown menu) -->
+      <div class="navbar-content d-md-none ml-auto">
+        <!-- d-md-none = display: none on medium screens and up (width > 768px), ml-auto = margin-left: auto -->
+        <div class="dropdown with-arrow">
+          <button class="btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1">
+            Menu
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right w-200" aria-labelledby="navbar-dropdown-toggle-btn-1">
+            <!-- w-200 = width: 20rem (200px) -->
+            <a href="#" class="dropdown-item">Docs</a>
+            <a href="#" class="dropdown-item">Products</a>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-content">
+              <button class="btn btn-primary btn-block" type="submit">Sair</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+    <div class="sidebar">
+      <div class="sidebar-menu">
+        <!-- Sidebar brand -->
+        <a href="#" class="sidebar-brand">
+          <img src="/images/Logo.png" alt="...">
+          Hotel Plast
+        </a>
+        <div class="sidebar-content">
+          <input type="text" class="form-control" placeholder="Search">
+          <div class="mt-10 font-size-12">
+          </div>
+        </div>
+        <h5 class="sidebar-title">Apartamento</h5>
+        <div class="sidebar-divider"></div>
+        <a href="/anuncie/apartamento" class="sidebar-link">Alugue seu apartamento</a>
+        <a href="/anuncie/apartamento" class="sidebar-link">Venda seu apartamento</a>
+        <br />
+        <h5 class="sidebar-title">Casa</h5>
+        <div class="sidebar-divider"></div>
+        <a href="/anuncie/casa" class="sidebar-link">Alugue sua Casa</a>
+        <a href="/anuncie/casa" class="sidebar-link">Venda sua Casa</a>
+        <br />
+        <h5 class="sidebar-title">Diponíveis</h5>
+        <div class="sidebar-divider"></div>
+        <a href="#" class="sidebar-link">Casas</a>
+        <a href="#" class="sidebar-link">Apartamento</a>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="content-wrapper">
+        <br>
+        <div class="card">
+          <%= User.name %> > Home > Anuncio > Casa
+          <div class="card">
+            <form action="/anuncie/casa/insert" method="post" enctype="multipart/form-data">
+              <div class="form-row row-eq-spacing-sm">
+                <div class="col-sm">
+                  <input type="hidden" name="id" value="<%= User.id %>">
+                  <label for="first-name" class="required">Descrição</label>
+                  <input type="text" name="description" class="form-control" id="first-name" placeholder="Descrição"
+                    required="required">
+                </div>
+                <div class="col-sm">
+                  <label for="last-name">Telefone</label>
+                  <input type="text" name="telephone" class="form-control" id="last-name" placeholder="Telefone">
+                </div>
+              </div>
+              <!-- Third row container -->
+              <div>
+                <label for="state" class="required">WhatsApp</label>
+                <!-- Third row -->
+                <div class="form-row row-eq-spacing-md">
+                  <div class="col-md-12">
+                    <input name="whatsapp" type="text" class="form-control" id="school-name" placeholder="WhatsApp"
+                      required="required">
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="state" class="required">Preço</label>
+                <!-- Third row -->
+                <div class="form-row row-eq-spacing-md">
+                  <div class="col-md-12">
+                    <input name="preco" type="text" class="form-control" id="school-name" placeholder="Preço do imovel"
+                      required="required">
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="state" class="required">Email</label>
+                <!-- Third row -->
+                <div class="form-row row-eq-spacing-md">
+                  <div class="col-md-12">
+                    <input name="email" type="text" class="form-control" id="school-name"
+                      placeholder="Exemple@exemple.com" required="required">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <select class="form-control" name="type" id="select-1">
+                <option value="" selected="selected" disabled="disabled">Tipo do Anuncio</option>
+                <option value="Venda">Venda</option>
+                <option value="Aluguel">Aluguel</option>
+              </select>
+              <div>
+                <br>
+                <!-- Multi-file input -->
+                <div class="custom-file">
+                  <input name="image_product" style="width: 100%;" type="file" id="multi-file-input-1"
+                    multiple="multiple" accept=".jpg,.png,.gif">
+                  <label for="multi-file-input-1">Adicionar imagens</label>
+                </div>
+              </div>
+              <div class="text-right">
+                <input class="btn btn-primary" type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-fixed-bottom">
+
+      </nav>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+</body>
